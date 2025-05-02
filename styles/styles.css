@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, rgba(174,238,210,1) 0%, rgba(148,187,233,1) 100%);
+    padding: 50px;
+    color: rgb(49, 106, 199);
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(68, 120, 173);
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.inputText {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgb(66, 133, 244);
+    background-color: rgb(242, 247, 255);
+    border-radius: 8px;
+}
+
+.inputText:hover{
+    color:rgb(49, 106, 199);
+    text-transform: capitalize;
+    border: 1px solid rgb(9, 27, 56);
+    background-color: rgb(222, 242, 255);
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    background-color: rgb(66, 133, 244);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(121, 161, 221);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.mensaje-error {
+    color: rgb(255, 0, 0);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    display: none;
+}
+
+li.completada span,
+li.completada .tarea-texto {
+    text-decoration: line-through;
+    color: rgb(128, 128, 128);
+}
+
+.eliminar {
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar:hover {
+    background-color: rgb(139, 0, 0);
+}
+
+.mensaje-vacio {
+    text-align: center;
+    color: rgb(29, 75, 150);
+    font-size: 1em;
+    margin-top: 20px;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    li .eliminar {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
